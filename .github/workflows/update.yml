@@ -30,6 +30,9 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          # Создаем пустой файл, если он не был создан скриптом
+          touch sub.txt
           git add sub.txt
-          git commit -m "Автоматическое обновление серверов" || exit 0
+          # Если изменений нет, команда commit вернет ошибку, поэтому мы добавляем || echo "No changes"
+          git commit -m "Автоматическое обновление серверов" || echo "Нет изменений для коммита"
           git push
