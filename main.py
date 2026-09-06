@@ -8,9 +8,7 @@ import subprocess
 import glob
 
 # Вставьте ваши ссылки сюда
-SOURCES = [
-https://github.com/kort0881/vpn-vless-configs-russia/raw/refs/heads/main/output/vless.txt
-]
+SOURCES = [ https://github.com/kort0881/vpn-vless-configs-russia/raw/refs/heads/main/output/vless.txt ]
 
 def get_nodes(url):
     try:
